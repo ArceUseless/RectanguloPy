@@ -12,14 +12,13 @@ class Rectangulo(object):
         self.alto = alto
         self.ancho = ancho
     
-    
     @property
     def alto(self):
         return self.__alto
     
     @alto.setter
     def alto(self, alto):
-        if Rectangulo.__validaParametros(self, alto) == False:
+        if not Rectangulo.__validaParametros(self, alto):
             raise ArithmeticError
         else:
             self.__alto = alto
